@@ -1,0 +1,128 @@
+= Haml::Engine.new(File.read('logged-wendy.haml'), instance_variable_get(:@haml_buffer).options).render
+#main.row
+  .large-12.columns
+    #cover{:style => 'background-image:url("img/cover.jpg");'}
+      %h2#lastname
+        %img{:src => 'img/photoprofil.jpg'}
+        Wendy Swan
+    #info.row
+      #joyride-3.large-9.columns
+        %span
+          %i.fi-map
+          france
+        %span -
+        %span 25 followers
+        %span -
+        %span 12 following
+        %span -
+        %span#social#joyride-4
+          %i.fi-social-facebook
+          %i.fi-social-twitter
+          %i.fi-social-pinterest
+      .large-3.columns.text-right
+        %a.button
+          %i.fi-plus
+          follow
+    #feed
+      #joyride-5.row
+        .large-4.columns
+          .panel.photo{:onClick => 'zoomIn(this)', :title => 'Wendy'}
+            %img{:src => 'img/look1.jpg'}
+            %h2 Wendy
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %div
+              %span Premier jour de travail chez #Abercrombie !
+        .large-4.columns
+          .panel.photo{:onClick => 'zoomIn(this)', :title => 'Wendy'}
+            %img{:src => 'img/look2.jpg'}
+            %h2 Wendy
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %div
+              %span Ultra fan des #Yankees de NYC !
+        .large-4.columns
+          .panel.fashtag #classic
+      .row
+        .large-6.columns
+          .panel.photo{:onClick => 'zoomIn(this)', :title => 'Wendy'}
+            %img{:src => 'img/profile-wendy/wendy4.jpg'}
+            %h2 Wendy
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %div
+              %span Soirée #Gala à EPITECH Paris ! #Robe #noire et #maquillage simple font l'affaire
+        .large-6.columns
+          .panel.photo{:onClick => 'zoomIn(this)', :title => 'Wendy'}
+            %img{:src => 'img/profile-wendy/wendy5.jpg'}
+            %h2 Wendy
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %div
+              %span Préparation de mon book ! Séance photo avec une #robe #blanche #chic
+      .row
+        .large-4.columns
+          .panel.photo{:onClick => 'zoomIn(this)', :title => 'Wendy'}
+            %img{:src => 'img/look3.jpg'}
+            %h2 Wendy
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %div
+              %span #Afterwork avec les collegues d'#Abercrombie. On s'habille simplement !
+        .large-4.columns
+          .panel.fashtag #simple
+        .large-4.columns
+          .panel.photo{:onClick => 'zoomIn(this)', :title => 'Wendy'}
+            %img{:src => 'img/look4.jpg'}
+            %h2 Wendy
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %div
+              %span Dimanche détente et posé devant la maison familiale. Il fait chaud on sort les vêtements d'#été #jean #short
+%ol.joyride-list{"data-joyride" => ""}
+  %li{"data-id" => "joyride-1", "data-options" => "tip_location: bottom"}
+    %h4 Logged-in
+    %p The user is currently logged-in as Wendy Swan.
+  %li{"data-id" => "joyride-11", "data-options" => "tip_location: top"}
+    %h4 New post
+    %p This is a button to create a new post.
+  %li{"data-id" => "joyride-2", "data-options" => "tip_location: top"}
+    %h4 Notifications area
+    %p This area is for notifications about pretty much everything: likes, comments and followers.
+  %li{"data-id" => "joyride-3", "data-options" => "tip_location: top"}
+    %h4 Profile informations
+    %p Here is some informations about the user profile (location, followers, following...etc.).
+  %li{"data-id" => "joyride-4", "data-options" => "tip_location: top"}
+    %h4 Social networks
+    %p The user can add links to his favorite social networks (Facebook, Twitter, Pinterest...etc.).
+  %li{"data-id" => "joyride-5", "data-options" => "tip_location: top"}
+    %h4 Fashwall
+    %p All pictures / albums / posts of the user are on the rest of the page.
+  %li{"data-options" => "next_button: false"}
+    %h4 Continue tour...
+    %p
+      %a{:href => './profile-moodress.html'}
+        %button.button.tiny Go to profile page
+%script{src: "js/vendor/jquery.js"}
+%script{src: "js/foundation.min.js"}
+:javascript
+  $(document).foundation().foundation('joyride', 'start');
+  $('.joyride-next-tip').last().remove();

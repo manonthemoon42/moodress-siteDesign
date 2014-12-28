@@ -1,0 +1,55 @@
+!!!
+%html.no-js{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
+    %title Moodress | Your fashion, your style, you!
+    %link{href: "css/foundation.css", rel: "stylesheet"}
+    %link{href: "icon/foundation-icons.css", rel: "stylesheet"}
+    %link{href: "css/override.css", rel: "stylesheet"}
+    %link{href: "css/font-awesome.css", rel: "stylesheet", type: "text/css"}
+    %link{href: "css/main-settings.css", rel: "stylesheet", type: "text/css"}
+    %link{href: "css/header.css", rel: "stylesheet", type: "text/css"}
+    %link{href: "css/user-cover.css", rel: "stylesheet", type: "text/css"}
+    %link{href: "css/user-menu.css", rel: "stylesheet", type: "text/css"}
+    %link{href: "css/user-body.css", rel: "stylesheet", type: "text/css"}
+    %script{src: "js/lightbox.js"}
+    %script{src: "js/vendor/modernizr.js"}
+    %script{src: "js/jquery-1.11.0.min.js", type: "text/javascript"}
+    %script{src: "js/typeahead-0.10.2.js", type: "text/javascript"}
+    %script{src: "js/header.js", type: "text/javascript"}
+    %script{src: "js/user-menu.js", type: "text/javascript"}
+    #all{:onClick => 'zoomIn()'}
+  %body.header-fixed{class: "#no-couture"}
+    #zoom-block
+    #header.connected
+      .container
+        .home
+          %a{href: "index.html"}
+            %img{:src => 'css/M.png'}
+        %span.not-connected
+        .not-connected
+          %a{href: "#"} Sign up
+        .not-connected
+          %a{href: "#"} Log in
+        .search
+          %form{action: "/", method: "GET"}
+            %input{name: "q", placeholder: " …", type: "text"}
+            %input{type: "submit"}/
+        .connected.notifications.light.friends
+          %a{href: "#"}
+            %i.fi-torso
+            %span 2
+        .connected.notifications.light.messages
+          %a{href: "#"}
+            %i.fi-comment
+            %span 5
+        .connected.notifications.light
+          %a{href: "#"}
+            %i.fi-heart
+            %span 1
+        %span.connected
+        .connected.profil
+          %a{href: "#"}
+            %img{src: "img/olivia-wilde-avatar.jpg"}
+      .menu-fixed

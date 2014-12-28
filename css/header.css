@@ -1,0 +1,142 @@
+#header,
+#header .couture {
+	border-color:rgba(0,0,0,0.4);
+	border-style:solid;
+	border-width:0 0 1px;
+}
+#header .container { margin-bottom:1px; }
+
+/* Selon si l'utilisateur est connecte ou non on affiche certains liens */
+#header.connected .not-connected { display:none; }
+#header.not-connected .connected { display:none; }
+
+#header .menu-fixed { position:relative; }
+
+#header,
+#header .couture {
+	background:#295168;
+}
+
+#header .couture {
+	border-top:1px solid rgba(0, 0, 0, 0.2);
+}
+
+#header {
+	position:relative;
+	background:-webkit-linear-gradient(top, #386F8E 0%, #295168 100%);
+	background:   -moz-linear-gradient(top, #386F8E 0%, #295168 100%);
+	background:    -ms-linear-gradient(top, #386F8E 0%, #295168 100%);
+}
+
+#header .container {
+	display:table;
+	height:100%; /* Fx */
+}
+
+#header .container > * {
+	display:table-cell;
+	width:1px;
+	height:100%; /* Fx */ 
+	vertical-align:middle;
+}
+
+/* delimiteurs */
+#header .container > span { padding:0 16px; }
+#header .container > span:after {
+	display:block;
+	content:"";
+	width:1px; height:50%;
+	background-color:rgba(0,0,0,0.25);
+}
+
+#header .container a {
+	display:block;
+	position:relative;
+	padding:3px;
+	border-radius:2px;
+	margin-top:2px;
+	white-space:nowrap; /* pour les liens: "Sign up" et "Log in" */
+	color:#fff;
+	font-weight:bold;
+	font-size:13px;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+#header .container a:hover {
+	background-color:rgba(0,0,0,0.2);
+}
+
+#header .container .home   a { width:28px; height:28px; }
+#header .container .home a img { width:100%; height:100%; border-radius:2px; }
+#header .container .profil a { width:28px; height:28px; }
+#header .container .profil a img { width:100%; height:100%; border-radius:2px; }
+
+#header .container > div + div { padding-left:12px; }
+
+#header .container a:hover  i { opacity:0.66; }
+#header .container .light a i { opacity:1.00; }
+#header .container a        i { opacity:0.33; font-size:22px; color:#fff; text-shadow:-1px -1px 0 rgba(0,0,0,0.66); }
+
+/* Petits numeros indiquant le nombre de notifs */
+#header .container .light a span { display:inline; }
+#header .container        a span { display:none;
+	position:absolute;
+	right:0;
+	bottom:0;
+	padding:3px 3px 1px 3px;
+	border-radius:2px;
+	color:#fff;
+	font-size:10px;
+	/*font-weight:bold;*/
+	text-shadow:0 0 2px rgba(0,0,0,0.5);
+	background-color:#f01818;
+	background:-webkit-linear-gradient(top, #f33a3a 0%, #f01818 100%);
+	background:   -moz-linear-gradient(top, #f33a3a 0%, #f01818 100%);
+	background:    -ms-linear-gradient(top, #f33a3a 0%, #f01818 100%);
+}
+
+#header .container .search { width:auto;padding-top:3.5px; }
+
+#header form { margin:0 5px 0 0; }
+
+#header form input[type="submit"] { position:absolute; margin-top:-1000px; } /* le submit est obligatoire et ne peut pas etre display:none; */
+#header form input[type="text"]:focus { box-shadow:inset 0 2px 3px rgba(0,0,0,0.2); }
+#header form input[type="text"] {
+	display:block;
+	width:100%;
+	height:26px;
+	border:1px solid rgba(0,0,0,0.1);
+	outline:0;
+	margin:0;
+	padding:6px 15px 5px;
+	font-size:14px;
+	color:#fff;
+	border-radius:2px;
+	background-color:rgba(0,0,0,0.15);
+}
+/* placeholder custom pour pouvoir mettre la petite loop de FontAwesome */
+#header form input[type="text"]::-webkit-input-placeholder { font-size:14px;font-family:"FontAwesome"; color:rgba(255,255,255,0.33); }
+#header form input[type="text"]::-moz-placeholder          { font-size:14px;font-family:"FontAwesome"; color:rgba(255,255,255,0.60); }
+#header form input[type="text"]:-ms-input-placeholder      { font-size:14px;font-family:"FontAwesome"; color:rgba(255,255,255,0.33); }
+
+/* ### Couture ### */
+#header .couture { height:7px; }
+#header .couture .padding { position:relative; }
+#header .couture .line {
+	position:absolute; top:3px; left:60px; right:10px;
+	border-top:1px dashed rgba(255,255,255,0.25);
+}
+#header .couture .line:before {
+	content:"";
+	position:absolute; z-index:99;
+	right:100%; top:-11px;
+	width:96px; height:22px;
+	background-image:url(couture_needle.png);
+}
+#header .couture .line:after {
+	content:"";
+	position:absolute; z-index:99;
+	left:100%; top:-3px;
+	width:34px; height:46px;
+	background-image:url(couture_right.png);
+}

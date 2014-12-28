@@ -1,0 +1,71 @@
+= Haml::Engine.new(File.read('logged-wendy.haml'), instance_variable_get(:@haml_buffer).options).render
+#main.row
+  #album.row
+    #highlight.large-5.columns
+    #thumbs.large-7.columns
+      .row
+        .large-4.columns
+        .large-4.columns
+        .large-4.columns
+      .row
+        .large-4.columns
+        .large-4.columns
+        .large-4.columns
+  #post.row
+    #info
+      %dl.tabs.row{"data-tab" => ""}
+        %dd.large-4.columns
+          %img{:src => 'img/profile-moodress/pp.png'}
+          Moodress
+        .large-8.columns
+          .right
+            %dd
+              %i.fi-like
+              %span 25
+            %dd
+              %i.fi-comment
+              %span 12
+    .row
+      .large-12.columns
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet adipiscing massa. Etiam ut tristique libero. Cras bibendum mi ac turpis fringilla, at viverra erat ullamcorper. In euismod eget sapien ac ultricies. Morbi vulputate velit risus, id interdum elit vehicula quis. Donec ipsum nulla, dapibus luctus erat et, malesuada auctor nisi. Integer varius quam id tortor iaculis commodo. Proin vulputate metus eget nisl cursus euismod. Donec iaculis eros quam. Duis nec vestibulum massa. Morbi porttitor ullamcorper risus, sed scelerisque velit adipiscing ac.
+    .row
+      .large-10.columns{:style => 'padding:0;font-size:14px;'}
+        .row
+          %img.large-1.columns{src: "http://placehold.it/30x30=PP", :style => 'padding-left:0;'}
+          %p.large-11.columns{:style => 'padding-left:0;margin-bottom:0;font-size:14px;'}
+            %span{style: "font-weight:bold;"} Guillaume
+            %span Lorem ipsum dolor sit amet, consecte adipiscing elit. Quisque a elit non dolor consequat dictum at vel metus.
+      .large-2.columns{:style => 'margin-top:8px;padding:0;text-align:center;font-size:20px;'}
+        %dd
+          %i.fi-like
+          %span{:style => 'color:gray;'} 25
+    %hr{:style => 'border-bottom:#007095 1px solid;'}
+    .row
+      .large-10.columns{:style => 'padding:0;font-size:14px;'}
+        .row
+          %img.large-1.columns{src: "http://placehold.it/30x30=PP", :style => 'padding-left:0;'}
+          %p.large-11.columns{:style => 'padding-left:0;margin-bottom:0;font-size:14px;'}
+            %span{style: "font-weight:bold;"} Sandro
+            %span Aliquam rhoncus eleifend faucibus. Nam vel risus vitae massa fringilla faucibus. Nam at rhoncus ante. Nulla iaculis quam ac convallis blandit. Ut porttitor quam id luctus varius. Aliquam ipsum ante, ultrices vel tempor non, adipiscing ac libero. Etiam sed metus libero.
+      .large-2.columns{:style => 'margin-top:8px;padding:0;text-align:center;font-size:20px;'}
+        %dd
+          %i.fi-like
+          %span{:style => 'color:gray;'} 25
+    %hr{:style => 'border-bottom:#007095 1px solid;'}
+    .row
+      .large-10.columns{:style => 'padding:0;font-size:14px;'}
+        .row
+          %img.large-1.columns{src: "http://placehold.it/30x30=PP", :style => 'padding-left:0;'}
+          %p.large-11.columns{:style => 'padding-left:0;margin-bottom:0;font-size:14px;'}
+            %span{style: "font-weight:bold;"} Arnaud
+            %span Nam at rhoncus ante.
+      .large-2.columns{:style => 'margin-top:8px;padding:0;text-align:center;font-size:20px;'}
+        %dd
+          %i.fi-like
+          %span{:style => 'color:gray;'} 25
+    #comments.row
+      .large-10.columns{:style => 'padding:0;margin-bottom:15px;font-size:14px;'}
+        %input{:type => 'text', :placeholder => 'Write a comment...', :style => 'width:95%;float:right;overflow:hidden;'}
+        %img{src: "http://placehold.it/37x37", :style => 'width:37px;height:37px;float:right;'}
+      .large-2.columns{:style => 'padding:0 0 0 5px;'}
+        %input.button.small{:type => 'submit', :style => 'display:inline-block;width:100%;padding-top:0.7rem;padding-bottom:0.63rem;'}

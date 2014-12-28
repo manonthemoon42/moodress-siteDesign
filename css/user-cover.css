@@ -1,0 +1,64 @@
+#user-cover {
+	overflow:hidden;
+	background:#111 url('noise-gray.png');
+	box-shadow:inset 0 0 200px rgba(0,0,0,0.8);
+}
+
+#user-cover .container,
+#user-cover .border { border-bottom-left-radius:0; border-bottom-right-radius:0; }
+#user-cover .border { margin-top:25px; padding-bottom:0; background-color:rgba(0,0,0,0.25); }
+
+#user-cover .container { display:table; width:100%; height:100%; }
+#user-cover .container > * { display:table-cell; position:relative; height:100%; } /* le height pour fx */
+#user-cover .container a.img { position:relative; display:block; height:100%; }
+#user-cover a.img * { position:absolute; left:0; right:0; top:0; bottom:0; }
+#user-cover .container a.img div { background-position:center; background-size:cover; }
+#user-cover .container a.img b { border:1px solid rgba(255,255,255,0.33); }
+
+#user-cover .infos {
+	position:absolute; z-index:1;
+	width:100%; top:50%; margin-top:-90px;
+}
+#user-cover .infos .center {
+	width:250px;
+	margin:auto;
+	text-align:center;
+}
+#user-cover .infos .center,
+#user-cover .infos a {
+	color:#fff;
+	text-decoration:none;
+}
+#user-cover .infos a:hover { text-decoration:underline; }
+#user-cover .infos .avatar {
+	display:inline-block;
+	margin-bottom:1em;
+}
+#user-cover .infos .avatar img {
+	width:150px; height:150px;
+	padding:4px;
+	border-radius:3px;
+	box-shadow:0 0 50px rgba(0,0,0,0.8);
+	background-color:#fff;
+}
+#user-cover .infos .name:empty + .aka { display:none; } /* si le nom est vide on n'affiche pas le "aka" */
+#user-cover .infos .center > span {
+	padding:0.2em 0.5em;
+	font-size:14px;
+	line-height:2em;
+	border-radius:3px;
+	background-color:rgba(0,0,0,0.8);
+}
+
+/* 4 albums on the right */
+#user-cover.four-albums-right .small-container { width:400px; }
+#user-cover.four-albums-right .small-container a.img { float:left; width:50%; height:50%; }
+/* bordures */
+#user-cover.four-albums-right a.img div { bottom:1px; }
+#user-cover.four-albums-right .small-container a.img div { left:1px; }
+/* radius */
+#user-cover.four-albums-right .big-container a.img * { border-top-right-radius:0; border-bottom-left-radius:0; border-bottom-right-radius:0; }
+#user-cover.four-albums-right .small-container a.img:nth-child(1) *,
+#user-cover.four-albums-right .small-container a.img:nth-child(3) *,
+#user-cover.four-albums-right .small-container a.img:nth-child(4) * { border-radius:0; }
+#user-cover.four-albums-right .small-container a.img:nth-child(2) * { border-top-left-radius:0; border-bottom-left-radius:0; border-bottom-right-radius:0; }

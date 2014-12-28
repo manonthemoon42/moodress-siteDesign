@@ -1,0 +1,59 @@
+#menu {
+	position:absolute; width:100%;
+	font-size:0.1em; /* reduire les white-space au minimum (1px) */
+}
+
+#menu,
+#menu .links {
+	background-color:#fff;
+}
+
+#menu .links a + a { margin-left:-1px; } /* suppression des white-spaces */
+#menu .links a {
+	position:relative;
+	display:inline-block;
+	overflow:hidden;
+	vertical-align:middle;
+	width:25%;
+	text-align:center;
+	text-decoration:none;
+	color:#666;
+	font-size:10em; /* on remet la taille du texte apres l'avoir enleve pour le inline-block */
+}
+
+#menu .avatar {
+	position:absolute; height:100%;
+	box-shadow: 1px 0 0 rgba(0,0,0,0.07);
+	background-size:cover;
+}
+#menu .avatar:hover {
+	background-color:blue;
+}
+
+#menu b { font-size:18px; }
+#menu span { padding-left:0.5em; opacity:0.8; }
+#menu span:before { content:"("; }
+#menu span:after  { content:")"; }
+
+#menu a:hover,
+#menu a.selected { color:#000; }
+#menu a.selected:hover { cursor:default; }
+#menu a.selected:after {
+	position:absolute;
+	display:block;
+	content:"";
+	left:50%; margin-left:-11px; bottom:-11px;
+	width:16px; height:16px;
+	-webkit-transform:rotate(45deg);
+	   -moz-transform:rotate(45deg);
+	    -ms-transform:rotate(45deg);
+	background:rgba(0,0,0,0.11);
+}
+
+#menu .shadow {
+	position:absolute; top:100%;
+	width:100%; height:4px;
+	background:-webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+	background:   -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+	background:    -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+}

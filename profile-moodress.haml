@@ -1,0 +1,120 @@
+= Haml::Engine.new(File.read('logged-moodress.haml'), instance_variable_get(:@haml_buffer).options).render
+#main.row
+  .large-12.columns
+    #cover{:style => 'background-image:url("img/profile-moodress/cover.jpg");'}
+      %h2#lastname
+        %img{:src => 'img/profile-moodress/pp.png', :style => 'border-radius:2px;'}
+        Moodress
+        %i.fi-star
+    #info.row
+      .large-9.columns
+        %span
+          %i.fi-web
+          moodress.com
+        %span -
+        %span
+          %i.fi-map
+          united states
+        %span -
+        %span 25 followers
+        %span -
+        %span 12 following
+        %span -
+        %span#social
+          %a{:href => 'https://www.facebook.com/moodress', :target => '_blank'}
+            %i.fi-social-facebook
+          %a{:href => 'https://twitter.com/moodress', :target => '_blank'}
+            %i.fi-social-twitter
+      .large-3.columns.text-right
+        %a.button
+          %i.fi-check
+          followed
+    #feed
+      .row
+        .large-4.columns
+          .panel.photo{:onClick => 'zoomIn(this)', :title => 'Arnaud'}
+            %img{:src => 'img/profile-moodress/arnaud.jpg'}
+            %h2 Arnaud
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %div
+              %span Etudiant EPITECH (4ème année), actuellement à Brockport, NY (USA) #EPITECH #USA
+        .large-4.columns
+          .panel.photo{:onClick => 'zoomIn(this)', :title => 'Alan'}
+            %img{:src => 'img/profile-moodress/alan.jpg'}
+            %h2 Alan
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %div
+              %span Etudiant EPITECH (4ème année), actuellement à San Marcos, CA (USA) #EPITECH #USA
+        .large-4.columns
+          .panel.photo{:onClick => 'zoomIn(this)', :title => 'C&G'}
+            %img{:src => 'img/profile-moodress/guillaume.jpg'}
+            %h2 C&G
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %div
+              %span Etudiants EPITECH (4ème année), actuellement à Guadalajara (Mexique) #EPITECH #Mexico
+      .row
+        .large-4.columns
+          .panel.photo{:onClick => 'zoomIn(this)', :title => 'Omer'}
+            %img{:src => 'img/profile-moodress/omer.jpg'}
+            %h2 Omer
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %div
+              %span Etudiant EPITECH (4ème année), actuellement à Seoul (South Korea) #EPITECH #SouthKorea
+        .large-4.columns
+          .panel.fashtag #team
+        .large-4.columns
+          .panel.photo{:onClick => 'zoomIn(this)', :title => 'Thomas'}
+            %img{:src => 'img/profile-moodress/thomas2.jpg'}
+            %h2 Thomas
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %div
+              %span Etudiant EPITECH (4ème année), actuellement à Laval (Quebec) #EPITECH #Canada
+      .row
+        .large-4.columns
+          .panel.photo{:onClick => 'zoomIn(this)', :title => 'Sandro'}
+            %img{:src => 'img/profile-moodress/sandro3.jpg'}
+            %h2 Sandro
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %div
+              %span Etudiant EPITECH (4ème année), actuellement à Longbeach, CA (USA) #EPITECH #USA
+        .large-4.columns
+          .panel.photo{:onClick => 'zoomIn(this)', :title => 'Steeven'}
+            %img{:src => 'img/profile-moodress/steeven3.jpg'}
+            %h2 Steeven
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %div
+              %span Etudiant EPITECH (4ème année), actuellement à Laval (Quebec) #EPITECH #Canada
+        .large-4.columns
+          .panel.fashtag #moodress
+%script{src: "js/vendor/jquery.js"}
+%script{src: "js/foundation.min.js"}
+:javascript
+  $(document).foundation();

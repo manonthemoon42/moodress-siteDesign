@@ -1,0 +1,43 @@
+/* reset */
+body {
+	margin:0;
+}
+a { text-decoration:none; }
+a img { border:0; } /* IE */
+.relative-wrapper { position:relative; height:100%; }
+
+/* largeur globale du site */
+#header > .container,
+#header .couture .padding,
+#header .menu-fixed,
+#user-cover > .border,
+#user-body > .border {
+	width:1000px;
+	margin:auto;
+}
+
+/* header fixed or not? */
+body.header-fixed #header { position:fixed; z-index:99; top:0; width:100%; }
+body.header-fixed { margin-top:50px; } /* 48 + 1 (border) */
+
+/* hauteur du header */
+#header { height:50px; }
+
+body.no-couture #header .couture { display:none; }
+
+/* hauteur de la cover */
+#user-cover > .border { height:380px; }
+
+/* hauteur du menu */
+#menu a,
+#user-body .padding:before {
+	line-height:60px;
+}
+
+/* ########################################### */
+
+/* border transparente exterieur */
+#user-cover .container a.img *,
+body > * > .border > .container,
+body > * > .border { border-radius:4px; }
+body > * > .border { padding:4px; }

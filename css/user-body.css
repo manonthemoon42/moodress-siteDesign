@@ -1,0 +1,25 @@
+body {
+	background:#d8d8d8 url(noise-white.png);
+	margin-bottom:150px;
+}
+
+#user-body > .border,
+#user-body > * > .container {
+	border-top-left-radius:0;
+	border-top-right-radius:0;
+}
+
+#user-body > .border {
+	padding-top:0;
+	background-color:rgba(255,255,255,0.33);
+}
+
+#user-body > * > .container {
+	position:relative;
+	background-color:rgba(255,255,255,0.75);
+}
+
+#user-body .padding:before { display:block; content:"\A0"; }
+#user-body .padding {
+	padding:10px;
+}

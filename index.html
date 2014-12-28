@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html class='no-js' lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <title>Moodress | Your fashion, your style, you!</title>
+    <link href='css/foundation.css' rel='stylesheet'>
+    <link href='icon/foundation-icons.css' rel='stylesheet'>
+    <link href='css/override.css' rel='stylesheet'>
+    <link href='css/font-awesome.css' rel='stylesheet' type='text/css'>
+    <link href='css/main-settings.css' rel='stylesheet' type='text/css'>
+    <link href='css/header.css' rel='stylesheet' type='text/css'>
+    <link href='css/user-cover.css' rel='stylesheet' type='text/css'>
+    <link href='css/user-menu.css' rel='stylesheet' type='text/css'>
+    <link href='css/user-body.css' rel='stylesheet' type='text/css'>
+    <script src='js/lightbox.js'></script>
+    <script src='js/vendor/modernizr.js'></script>
+    <script src='js/jquery-1.11.0.min.js' type='text/javascript'></script>
+    <script src='js/typeahead-0.10.2.js' type='text/javascript'></script>
+    <script src='js/header.js' type='text/javascript'></script>
+    <script src='js/user-menu.js' type='text/javascript'></script>
+    <div id='all' onClick='zoomIn()'></div>
+  </head>
+  <body class='#no-couture header-fixed'>
+    <div id='zoom-block'></div>
+    <div class='connected' id='header'>
+      <div class='container'>
+        <div class='home'>
+          <a href='index.html'>
+            <img src='css/M.png'>
+          </a>
+        </div>
+        <div class='search'>
+          <form action='/' method='GET'>
+            <input name='q' placeholder=' …' type='text'>
+            <input type='submit'>
+          </form>
+        </div>
+        <div class='connected'>
+          <a data-reveal-id='signup-modal' href='#'>Sign up</a>
+        </div>
+        <span></span>
+        <div class='connected'>
+          <a data-reveal-id='signin-modal' href='#' id='joyride-1'>Log in</a>
+        </div>
+      </div>
+      <div class='menu-fixed'></div>
+    </div>
+  </body>
+</html>
+<div class='row' id='main'>
+  <div class='row' style='min-height:500px;background-image:url("img/coverhome.jpg");background-repeat:no-repeat;'>
+    <div class='large-6 columns' style='text-align:center;margin:150px 50px;padding:30px 0 25px 0;background-color:white;width:38%;border-radius:2px;'>
+      <div class='row'>
+        <div class='large-12 columns'>
+          <img src='img/logo.png' style='width:175px;'>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='large-12 columns'>
+          <div class='button medium' id='demo' style='margin-top:25px;'>
+            <i class='fi-monitor'></i>
+            View demo
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='large-12 columns'>
+          <div class='button tiny' style='margin-bottom:0;background-color:#3B5998;'>
+            <i class='fi-social-facebook'></i>
+            Share on Facebook
+          </div>
+          <div class='button tiny' style='margin-bottom:0;background-color:#55acee;'>
+            <i class='fi-social-twitter'></i>
+            Share on Twitter
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='large-6 columns'></div>
+  </div>
+  <div id='info'>
+    <dl class='tabs row' data-tab=''>
+      <dd class='large-4 columns' style='padding:0 0 0 25px;'>
+        <a href='#panel2-1' id='joyride-2' style='padding:0;background-color:transparent;'>
+          <i class='fi-star'></i>
+          trending
+        </a>
+      </dd>
+      <div class='large-8 columns'>
+        <div class='right'>
+          <dd>
+            <a href='#panel2-2'>#colorful</a>
+          </dd>
+          <dd id='joyride-3'>
+            <a href='#panel2-2'>
+              <i class='fi-clock'></i>
+            </a>
+          </dd>
+          <dd>
+            <a href='#panel2-2'>
+              <i class='fi-graph-trend'></i>
+            </a>
+          </dd>
+          <dd>
+            <a href='#panel2-2'>
+              <i class='fi-male-symbol'></i>
+            </a>
+          </dd>
+          <dd>
+            <a href='#panel2-2'>
+              <i class='fi-female-symbol'></i>
+            </a>
+          </dd>
+          <dd>
+            <a href='#panel2-2'>
+              <i class='fi-heart'></i>
+            </a>
+          </dd>
+        </div>
+      </div>
+    </dl>
+  </div>
+  <div class='tabs-content' id='feed'>
+    <div class='content active' id='panel2-1'>
+      <div class='row' id='feed'>
+        <div class='large-4 columns'>
+          <div class='panel photo'>
+            <img src='img/13.jpg'>
+            <h2>Meryl</h2>
+            <h3>
+              <i class='fi-like'></i>
+              25
+              <i class='fi-comment'></i>
+              12
+            </h3>
+            <span>
+              <div>Habits chics pour une petite balade en ville</div>
+            </span>
+          </div>
+        </div>
+        <div class='large-4 columns'>
+          <div class='panel photo'>
+            <img src='img/hat1.jpg'>
+            <h2>Kastonez</h2>
+            <h3>
+              <i class='fi-like'></i>
+              25
+              <i class='fi-comment'></i>
+              12
+            </h3>
+            <span>
+              <div>
+                <a href='http://www.facebook.com/Kastonez'>facebook.com/Kastonez</a>
+              </div>
+            </span>
+          </div>
+        </div>
+        <div class='large-4 columns'>
+          <div class='panel photo'>
+            <img src='img/12.jpg'>
+            <h2>Meryl</h2>
+            <h3>
+              <i class='fi-like'></i>
+              25
+              <i class='fi-comment'></i>
+              12
+            </h3>
+            <span>
+              <div>Nouvelle chaussures à talons</div>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='large-4 columns'>
+          <div class='panel fashtag'>#colorful</div>
+        </div>
+        <div class='large-4 columns'>
+          <div class='panel photo'>
+            <img src='img/Burger.png'>
+            <h2>LORDS</h2>
+            <h3>
+              <i class='fi-like'></i>
+              25
+              <i class='fi-comment'></i>
+              12
+            </h3>
+            <span>
+              <div>Nouvelle création du LORDS Collective</div>
+            </span>
+          </div>
+        </div>
+        <div class='large-4 columns'>
+          <div class='panel photo'>
+            <img src='img/wendy25.jpg'>
+            <h2>Wendy</h2>
+            <h3>
+              <i class='fi-like'></i>
+              25
+              <i class='fi-comment'></i>
+              12
+            </h3>
+            <span>
+              <div>Deuxième jour de shooting, Jasmine style!</div>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='large-4 columns'>
+          <div class='panel photo'>
+            <img src='img/SKull.png'>
+            <h2>LORDS</h2>
+            <h3>
+              <i class='fi-like'></i>
+              25
+              <i class='fi-comment'></i>
+              12
+            </h3>
+            <span>
+              <div>
+                <a href='http://www.facebook.com/LRDScollective'>facebook.com/LRDScollective</a>
+              </div>
+            </span>
+          </div>
+        </div>
+        <div class='large-4 columns'>
+          <div class='panel photo'>
+            <img src='img/8.jpg'>
+            <h2>Meryl</h2>
+            <h3>
+              <i class='fi-like'></i>
+              25
+              <i class='fi-comment'></i>
+              12
+            </h3>
+            <span>
+              <div>Changement de saison, on sort la veste</div>
+            </span>
+          </div>
+        </div>
+        <div class='large-4 columns'>
+          <div class='panel fashtag'>#simple</div>
+        </div>
+      </div>
+    </div>
+    <div class='content' id='panel2-2'>
+      Arnaud
+    </div>
+  </div>
+</div>
+<ol class='joyride-list' data-joyride='' id='joyride'>
+  <li data-id='joyride-1' data-options='tip_location: bottom'>
+    <h4>Sign In</h4>
+    <p>Here is the main form to sign-in as a user.</p>
+  </li>
+  <li data-id='joyride-2' data-options='tip_location: top'>
+    <h4>Trending news</h4>
+    <p>Here are the last trends based an algorithm.</p>
+  </li>
+  <li data-id='joyride-3' data-options='tip_location: top'>
+    <h4>Recent news</h4>
+    <p>Here are the most recent news by chronological order.</p>
+  </li>
+  <li data-options='next_button: false'>
+    <h4>Continue tour...</h4>
+    <p>
+      <a href='./profile-wendy.html'>
+        <button class='button tiny'>Go to profile page</button>
+      </a>
+    </p>
+  </li>
+</ol>
+<div class='reveal-modal tiny' data-reveal='' id='signin-modal'>
+  <div class='row'>
+    <div class='large-2 columns'></div>
+    <div class='large-10 columns'>
+      <h2 style='margin-bottom:25px;'>Sign In</h2>
+    </div>
+  </div>
+  <form>
+    <div class='row'>
+      <div class='large-2 columns'>
+        <label class='right inline'>Email</label>
+      </div>
+      <div class='large-10 columns'>
+        <input type='text'>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='large-2 columns'>
+        <label class='right inline'>Password</label>
+      </div>
+      <div class='large-10 columns'>
+        <input type='text'>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='large-2 columns'></div>
+      <div class='large-10 columns'>
+        <input type='checkbox'>
+        <label>Remember me</label>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='large-2 columns'></div>
+      <div class='large-10 columns'>
+        <input class='button tiny' id='joyride-1' style='width:100%;' type='submit' value='Sign In'>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='large-12 columns' style='border-bottom:black 1px solid;margin:25px 0;'></div>
+    </div>
+    <div class='row'>
+      <div class='large-12 columns'>
+        <img src='img/facebook.png'>
+      </div>
+    </div>
+  </form>
+  <a class='close-reveal-modal'>×</a>
+</div>
+<div class='reveal-modal tiny' data-reveal='' id='signup-modal'>
+  <div class='row'>
+    <div class='large-2 columns'></div>
+    <div class='large-10 columns'>
+      <h2 style='margin-bottom:25px;'>Sign Up</h2>
+    </div>
+  </div>
+  <form>
+    <div class='row'>
+      <div class='large-2 columns'>
+        <label class='right inline'>Firstname</label>
+      </div>
+      <div class='large-10 columns'>
+        <input type='text'>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='large-2 columns'>
+        <label class='right inline'>Lastname</label>
+      </div>
+      <div class='large-10 columns'>
+        <input type='text'>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='large-2 columns'>
+        <label class='right inline'>Username</label>
+      </div>
+      <div class='large-10 columns'>
+        <input type='text'>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='large-2 columns'>
+        <label class='right inline'>Email</label>
+      </div>
+      <div class='large-10 columns'>
+        <input type='text'>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='large-2 columns'>
+        <label class='right inline'>Password</label>
+      </div>
+      <div class='large-10 columns'>
+        <input type='password'>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='large-2 columns'></div>
+      <div class='large-10 columns'>
+        <input type='checkbox'>
+        <label>I accept terms and privacy policy</label>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='large-2 columns'></div>
+      <div class='large-10 columns'>
+        <input class='button tiny' id='joyride-1' style='width:100%;' type='submit' value='Sign Up'>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='large-12 columns' style='border-bottom:black 1px solid;margin:25px 0;'></div>
+    </div>
+    <div class='row'>
+      <div class='large-12 columns'>
+        <img src='img/facebook.png'>
+      </div>
+    </div>
+  </form>
+  <a class='close-reveal-modal'>×</a>
+</div>
+<script src='js/vendor/jquery.js'></script>
+<script src='js/foundation.min.js'></script>
+<script>
+  $(document).foundation();
+  $("#demo").click(function(){
+  $(document).foundation().foundation('joyride', 'start');
+  $('.joyride-next-tip').last().remove();
+  });
+</script>

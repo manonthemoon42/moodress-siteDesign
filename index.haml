@@ -1,0 +1,173 @@
+= Haml::Engine.new(File.read('header-guest.haml'), instance_variable_get(:@haml_buffer).options).render
+#main.row
+  .row{:style => 'min-height:500px;background-image:url("img/coverhome.jpg");background-repeat:no-repeat;'}
+    .large-6.columns{:style => 'text-align:center;margin:150px 50px;padding:30px 0 25px 0;background-color:white;width:38%;border-radius:2px;'}
+      .row
+        .large-12.columns
+          %img{:src => 'img/logo.png', :style => 'width:175px;'}
+      .row
+        .large-12.columns
+          #demo.button.medium{:style => 'margin-top:25px;'}
+            %i.fi-monitor
+            View demo
+      .row
+        .large-12.columns
+          .button.tiny{:style => 'margin-bottom:0;background-color:#3B5998;'}
+            %i.fi-social-facebook
+            Share on Facebook
+          .button.tiny{:style => 'margin-bottom:0;background-color:#55acee;'}
+            %i.fi-social-twitter
+            Share on Twitter
+    .large-6.columns
+  #info
+    %dl.tabs.row{"data-tab" => ""}
+      %dd.large-4.columns{:style => 'padding:0 0 0 25px;'}
+        %a#joyride-2{href: "#panel2-1", :style => 'padding:0;background-color:transparent;'} 
+          %i.fi-star
+          trending
+      .large-8.columns
+        .right
+          %dd
+            %a{href: "#panel2-2"} #colorful
+          %dd#joyride-3
+            %a{href: "#panel2-2"}
+              %i.fi-clock
+          %dd
+            %a{href: "#panel2-2"}
+              %i.fi-graph-trend
+          %dd
+            %a{href: "#panel2-2"}
+              %i.fi-male-symbol
+          %dd
+            %a{href: "#panel2-2"}
+              %i.fi-female-symbol
+          %dd
+            %a{href: "#panel2-2"}
+              %i.fi-heart
+  #feed.tabs-content
+    #panel2-1.content.active
+      #feed.row
+        .large-4.columns
+          .panel.photo
+            %img{:src => 'img/13.jpg'}
+            %h2 Meryl
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %span
+              %div Habits chics pour une petite balade en ville
+        .large-4.columns
+          .panel.photo
+            %img{:src => 'img/hat1.jpg'}
+            %h2 Kastonez
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %span
+              %div
+                %a{:href => 'http://www.facebook.com/Kastonez'} facebook.com/Kastonez
+        .large-4.columns
+          .panel.photo
+            %img{:src => 'img/12.jpg'}
+            %h2 Meryl
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %span
+              %div Nouvelle chaussures à talons
+      .row
+        .large-4.columns
+          .panel.fashtag #colorful
+        .large-4.columns
+          .panel.photo
+            %img{:src => 'img/Burger.png'}
+            %h2 LORDS
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %span
+              %div Nouvelle création du LORDS Collective
+        .large-4.columns
+          .panel.photo
+            %img{:src => 'img/wendy25.jpg'}
+            %h2 Wendy
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %span
+              %div Deuxième jour de shooting, Jasmine style!
+      .row
+        .large-4.columns
+          .panel.photo
+            %img{:src => 'img/SKull.png'}
+            %h2 LORDS
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %span
+              %div
+                %a{:href => 'http://www.facebook.com/LRDScollective'} facebook.com/LRDScollective
+        .large-4.columns
+          .panel.photo
+            %img{:src => 'img/8.jpg'}
+            %h2 Meryl
+            %h3
+              %i.fi-like
+              25
+              %i.fi-comment
+              12
+            %span
+              %div Changement de saison, on sort la veste
+        .large-4.columns
+          .panel.fashtag #simple
+    #panel2-2.content
+      Arnaud
+%ol#joyride.joyride-list{"data-joyride" => ""}
+  %li{"data-id" => "joyride-1", "data-options" => "tip_location: bottom"}
+    %h4 Sign In
+    %p Here is the main form to sign-in as a user.
+  %li{"data-id" => "joyride-2", "data-options" => "tip_location: top"}
+    %h4 Trending news
+    %p Here are the last trends based an algorithm.
+  %li{"data-id" => "joyride-3", "data-options" => "tip_location: top"}
+    %h4 Recent news
+    %p Here are the most recent news by chronological order.
+  %li{"data-options" => "next_button: false"}
+    %h4 Continue tour...
+    %p
+      %a{:href => './profile-wendy.html'}
+        %button.button.tiny Go to profile page
+#signin-modal.reveal-modal.tiny{'data-reveal' => ''}
+  .row
+    .large-2.columns
+    .large-10.columns
+      %h2{:style => 'margin-bottom:25px;'} Sign In
+  = Haml::Engine.new(File.read('form-signin.haml'), instance_variable_get(:@haml_buffer).options).render
+  %a.close-reveal-modal ×
+#signup-modal.reveal-modal.tiny{'data-reveal' => ''}
+  .row
+    .large-2.columns
+    .large-10.columns
+      %h2{:style => 'margin-bottom:25px;'} Sign Up
+  = Haml::Engine.new(File.read('form-signup.haml'), instance_variable_get(:@haml_buffer).options).render
+  %a.close-reveal-modal ×
+%script{src: "js/vendor/jquery.js"}
+%script{src: "js/foundation.min.js"}
+:javascript
+  $(document).foundation();
+  $("#demo").click(function(){
+  $(document).foundation().foundation('joyride', 'start');
+  $('.joyride-next-tip').last().remove();
+  });

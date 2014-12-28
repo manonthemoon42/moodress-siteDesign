@@ -1,0 +1,23 @@
+= Haml::Engine.new(File.read('logged-wendy.haml'), instance_variable_get(:@haml_buffer).options).render
+#main.row
+  .large-12.columns{:style => 'margin-top:60px;padding-left:10px;'}
+    %h2{:style => 'font-family:"Segoe UI Light";margin-bottom:25px;border-bottom:black 1px solid;padding-bottom:10px;'} New Post
+    %form.row
+      .large-4.columns
+        %label
+          Title
+          %input{type: "text"}
+        %br
+        %label
+          Fashtags (5 max.)
+          %input{type: "text"}
+        %br
+        %label
+          Photos
+          %input{:type => 'file', :style => 'margin-top:10px;'}
+      .large-8.columns
+        %label
+          Content
+          %textarea{:style => 'height:200px;'}
+        .text-right
+          %input.button.tiny{:type => 'submit', :value => 'Create New Post'}
